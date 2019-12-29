@@ -1,0 +1,7 @@
+{
+    "title": "论文浅尝",
+    "author": "OpenKG",
+    "plugins": [
+        "mathjax"
+    ]
+}
