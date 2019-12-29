@@ -4,14 +4,24 @@ import html2text
 from bs4 import BeautifulSoup
 import re
 from random import choice
-# import configure
+# import Configure
 import tomd
+import json
+from fake_useragent import UserAgent
 
+ua = UserAgent()
 
-# header = {}
-# header['user-agent'] =  choice(Configure.FakeUserAgents)
+header = {}
+header['user-agent'] =  'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
 
 test_url = 'https://mp.weixin.qq.com/s?src=11&timestamp=1577605723&ver=2063&signature=9zYwrSl771SsNT7qx4GYDFQ3yCdUXZOIJ5ztwlih4myfqZ9suV24p6RwR5KtTdMqkHhUSuAqo-uPh*EtXfhD*9hAc-x8hQP-FUPlYVAUHxvotU7QLpoD4sWgNtbmFEaV&new=1'
+
+def read_paper_list():
+    with open('./article.json', 'r', encoding='utf8') as file:
+        paper_json = json.loads(file.read())
+        # print(paper_json)
+        paper_list = paper_json['paper']
+    return paper_list
 
 
 def get_content(url):
@@ -33,13 +43,18 @@ def get_content(url):
     # title.string = title.text.strip()
     # title = html_content.h2.text.strip()
     title.string = re.match(r'论文浅尝 \| (.*)', title.text.strip()).group(1)
+    print(title.text.strip())
 
     filename = title.text.strip().replace(' ','-') + '.md'
 
     publish_time = html_content.find(id='meta_content').em.text.strip()
 
-    author = html_content.find(id='meta_content').find('span',attrs={'class': 'rich_media_meta rich_media_meta_text'}).text
-    author = author.strip()
+    author = html_content.find(id='meta_content').find('span',class_='rich_media_meta')
+    author = author.text.strip()[3:] if author else None
+    
+    # author = html_content.find(id='meta_content').find('span',attrs={'class': 'rich_media_meta rich_media_meta_text'}) #.text
+    print(author)
+    # author = author.strip()
 
     # html_content.find(id='activity-name').decompose()
     html_content.find(id='meta_content').decompose()
@@ -51,8 +66,8 @@ def get_content(url):
     new_tag.string = "> 笔记整理: " + author
     title.insert_after(new_tag)
 
-    # 处理图片
-    ## 文件夹
+    # image
+    ## dir
     dir_path = os.path.dirname(os.path.realpath(__file__))
     dir_name = dir_path + "/posts/%s" % title.text.strip()
     dir_img = dir_name + "/img"
@@ -60,8 +75,7 @@ def get_content(url):
         os.mkdir(dir_name)
         os.mkdir(dir_img)
 
-    
-    ## 下载并替换为本地图片
+    ## download
     counter = 1
     
     images = html_content.find_all('img')
@@ -86,7 +100,7 @@ def get_content(url):
             tag.string = "![](img/{0:s})".format(img_name)
             image.replace_with(tag)
             
-    # 去除<br/> <br></br>
+    # delete <br/> <br></br>
     brs = html_content.find_all('br')
     if brs:
         for br in brs:
@@ -94,7 +108,7 @@ def get_content(url):
 
     mdText = str(html_content).replace('<br/>','')
 
-    pattern = re.compile('OpenKG.CN(.*)', re.MULTILINE)
+    pattern = re.compile('^OpenKG(.*)', re.MULTILINE)
     mdText = pattern.sub('', mdText)
 
     mdText = tomd.Tomd(mdText).markdown
@@ -102,34 +116,63 @@ def get_content(url):
     with open(dir_name + '/' +filename, 'w', encoding='utf8') as file:
         file.write(mdText)
     
-    return title, publish_time, author
+    write_to_summary(title.text.strip(), 'src/posts/{title}/{filename}'.format(title=title.text.strip(),filename=filename))
+    write_to_acknowledge(author)
+    return title.text, author
 
 
 def get_urls():
-    url = "http://weixin.sogou.com/weixin"
-    try:
-        response = requests.get(url, headers=header, params=payload)
-        content = None
+    payload = {}
+    page_num = 1
 
-        if response.status_code == requests.codes.ok:
-            content = response.text
-            
-    except Exception as e:
-        print (e)
+    for i in range(1, page_num+1):
+        payload = {
+            'type':2,
+            's_from':'input',
+            'query':'论文浅尝',
+            'ie':'utf8',
+            'page': i
+        }
 
-    soup = BeautifulSoup(content, 'lxml')
+        url = "https://weixin.sogou.com/weixin"
+        
+        try:
+            response = requests.get(url, headers=header, params=payload)
+            content = None
 
-    news_list = soup.find(class_='news-list').find_all('li')
+            if response.status_code == requests.codes.ok:
+                content = response.text
+                
+        except Exception as e:
+            print (e)
 
-    for new in news_list:
-        get_content(new.a.get('href').strip())
-        #break
+        soup = BeautifulSoup(content, 'lxml')
+
+        news_list = soup.find(class_='news-list').find_all('li')
+        print('https://weixin.sogou.com/' + news_list[1].a.get('href').strip())
+        get_content('https://weixin.sogou.com/' + news_list[1].a.get('href').strip())
+        # for new in news_list:
+        #     # get_content(new.a.get('href').strip())
+        #     print(new.a.get('href').strip())
 
 
+def write_to_summary(title, dir):
+    with open( '../SUMMARY.md' , 'a', encoding='utf8') as file:
+        file.write('- [{title}]({dir})\n'.format(title=title,dir=dir))
+    print('write to summary...')
+
+def write_to_acknowledge(author):
+    with open( '../acknowledgement.md' , 'a', encoding='utf8') as file:
+        file.write('- %s\n' % author)
 
 if __name__ == '__main__':
-    title, publish_time, author = get_content(test_url)
-    print(title)
-    print(publish_time)
-    print(author)
+    paper_list = read_paper_list()
+    i = 0
+    for url in paper_list[26:]:
+        print(url)
+        print(i)
+        i += 1
+        title, author = get_content(url)
+        print(title)
+        print(author)
 
