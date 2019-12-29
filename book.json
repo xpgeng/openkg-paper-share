@@ -1,9 +1,7 @@
 {
     "title": "论文浅尝",
     "author": "OpenKG",
-    "plugins": [
-        "mathjax"
-    ],
+    "plugins": [],
     "pluginsConfig": {
         "theme-default": {
             "showLevel": true
