@@ -3,5 +3,10 @@
     "author": "OpenKG",
     "plugins": [
         "mathjax"
-    ]
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        }
+    }
 }
