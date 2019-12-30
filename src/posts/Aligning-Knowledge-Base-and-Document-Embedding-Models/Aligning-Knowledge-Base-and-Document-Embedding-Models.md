@@ -1,7 +1,7 @@
 
 ## Aligning Knowledge Base and Document Embedding Models
 
-&gt; 笔记整理: 
+> 笔记整理：张文，浙江大学在读博士，研究方向为知识图谱的表示学习，推理和可解释。
 
 ![](img/Aligning-Knowledge-Base-and-Document-Embedding-Models.md_1.png)
 
@@ -31,22 +31,3 @@
 
 从上图的实验结果能够看出，简单了非线性空间映射几乎无法完成对齐任务，同时KADE实现了知识图谱实体和实体描述文本的对齐。
 
- 
-
-对本文有兴趣的读者欢迎阅读原文～
-
- 
-
-笔记整理：张文，浙江大学在读博士，研究方向为知识图谱的表示学习，推理和可解释。
-
-
-
-**OpenKG.CN**
-
-
-
-中文开放知识图谱（简称OpenKG.CN）旨在促进中文知识图谱数据的开放与互联，促进知识图谱和语义技术的普及和广泛应用。
-
-![](img/Aligning-Knowledge-Base-and-Document-Embedding-Models.md_6.jpeg)
-
-点击**阅读原文**，进入 OpenKG 博客。

@@ -1,7 +1,7 @@
 
 ## Generative QA: Learning to Answer the Whole Question
 
-&gt; 笔记整理: 
+> 论文笔记整理：王梁，浙江大学硕士，研究方向为知识图谱，自然语言处理。
 
 ![](img/Generative-QA:-Learning-to-Answer-the-Whole-Question.md_1.png)
 
@@ -53,18 +53,3 @@
 
 在包含对抗样本的数据集Adversarial SQuAD上的表现也好过判别模型。
 
- 
-
-论文笔记整理：王梁，浙江大学硕士，研究方向为知识图谱，自然语言处理。
-
-
-
-**OpenKG.CN**
-
-
-
-中文开放知识图谱（简称OpenKG.CN）旨在促进中文知识图谱数据的开放与互联，促进知识图谱和语义技术的普及和广泛应用。
-
-![](img/Generative-QA:-Learning-to-Answer-the-Whole-Question.md_10.jpeg)
-
-点击**阅读原文**，进入 OpenKG 博客。

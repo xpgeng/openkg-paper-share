@@ -1,7 +1,7 @@
 
 ## Interaction Embeddings for Prediction and Explanation
 
-&gt; 笔记整理: 
+> 笔记整理：张文，浙江大学在读博士，研究方向为知识图谱的表示学习，推理和可解释。
 
 ![](img/Interaction-Embeddings-for-Prediction-and-Explanation.md_1.png)
 
@@ -40,21 +40,3 @@
  
 
 链接预测和可解释的实验从两个不同的方面评估了知识图谱表示学习的效果，同时也说明了链接预测的准确性和可解释性没有必然联系，链接预测效果好的模型并不一定能够更好地提供解释，反之亦然。
-
- 
-
-对本文有兴趣的读者欢迎阅读原文～
-
-笔记整理：张文，浙江大学在读博士，研究方向为知识图谱的表示学习，推理和可解释。
-
-
-
-**OpenKG.CN**
-
-
-
-中文开放知识图谱（简称OpenKG.CN）旨在促进中文知识图谱数据的开放与互联，促进知识图谱和语义技术的普及和广泛应用。
-
-![](img/Interaction-Embeddings-for-Prediction-and-Explanation.md_8.jpeg)
-
-点击**阅读原文**，进入 OpenKG 博客。

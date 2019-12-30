@@ -1,19 +1,19 @@
 
 ## Global Relation Embedding for Relation Extraction
 
-&gt; 笔记整理: 
+> 笔记整理：王冠颖，浙江大学硕士，研究方向关系抽取、知识图谱
 
 ![](img/Global-Relation-Embedding-for-Relation-Extraction.md_1.png)
 
-******链接**：https://arxiv.org/abs/1704.05958
+> **链接**：https://arxiv.org/abs/1704.05958
 
-**Introduction**
+## **Introduction**
 
 在关系抽取任务中，通常采用远程监督的方式自动生成数据集。由于实体对间可能存在多关系，生成的数据集往往存在大量噪音。本文对文本中的关系表述（textual relation）和知识库中的关系（kb relation）进行了共现统计，利用全局统计的信息训练 embedding，使模型能更加鲁棒地应对训练噪音的问题。
 
  
 
-**Idea**
+## **Idea**
 
 本文的核心思想是：全局的统计信息比局部的统计信息更加鲁棒。在传统的关系抽取训练中，句子与句子之间是独立的，基于单句的局部特征训练模型，受到错误标签的影响比较大。本文提出了一种全局统计的思路，对每个句子，提取它文本中的关系表述（textual relation），并统计该 textual relation 在训练集中共现的 kb relation 的分布，这个分布可以用来作为 textual relation 的embedding 表示。
 
@@ -29,7 +29,7 @@
 
  
 
-**Methods**
+## **Methods**
 
 **1****、统计**
 
@@ -93,7 +93,7 @@
 
 ![](img/Global-Relation-Embedding-for-Relation-Extraction.md_16.png)
 
-**Experiments**
+## **Experiments**
 
 本文首先在多种关系抽取模型上进行了GloRE的加成测试，效果均有一定提升：
 
@@ -112,17 +112,3 @@
 ![](img/Global-Relation-Embedding-for-Relation-Extraction.md_20.png)
 
 
-
-笔记整理：王冠颖，浙江大学硕士，研究方向关系抽取、知识图谱
-
-
-
-**OpenKG**
-
-
-
-开放知识图谱（简称 OpenKG）旨在促进中文知识图谱数据的开放与互联，促进知识图谱和语义技术的普及和广泛应用。
-
-![](img/Global-Relation-Embedding-for-Relation-Extraction.md_21.jpeg)
-
-点击**阅读原文**，进入 OpenKG 博客。
