@@ -1,5 +1,5 @@
 
-## Aligning Knowledge Base and Document Embedding Models
+## 基于embedding模型的知识库和文档对齐
 
 > 笔记整理：张文，浙江大学在读博士，研究方向为知识图谱的表示学习，推理和可解释。
 

@@ -1,5 +1,5 @@
 
-## Generative QA: Learning to Answer the Whole Question
+## 基于生成的问答系统
 
 > 论文笔记整理：王梁，浙江大学硕士，研究方向为知识图谱，自然语言处理。
 

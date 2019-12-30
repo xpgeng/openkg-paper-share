@@ -1,5 +1,5 @@
 
-## Interaction Embeddings for Prediction and Explanation
+## 基于交叉交互的知识图谱链接预测及可解释
 
 > 笔记整理：张文，浙江大学在读博士，研究方向为知识图谱的表示学习，推理和可解释。
 

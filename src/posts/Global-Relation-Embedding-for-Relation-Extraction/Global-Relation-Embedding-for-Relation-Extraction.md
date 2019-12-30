@@ -1,5 +1,5 @@
 
-## Global Relation Embedding for Relation Extraction
+## 全局关系嵌入表示在关系抽取中的应用
 
 > 笔记整理：王冠颖，浙江大学硕士，研究方向关系抽取、知识图谱
 
