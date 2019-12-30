@@ -70,4 +70,4 @@
    * [一种嵌入效率极高的 node embedding 方式](src/posts/一种嵌入效率极高的-node-embedding-方式/一种嵌入效率极高的-node-embedding-方式.md)
    * [图神经网络综述：方法及应用](src/posts/图神经网络综述：方法及应用/图神经网络综述：方法及应用.md)
 
-
+* [致谢](acknowledgement.md)
