@@ -1,6 +1,8 @@
 {
     "title": "论文浅尝",
     "author": "OpenKG",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
     "root": ".",
     "structure": {
         "readme": "introduction.md"
