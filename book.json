@@ -1,6 +1,10 @@
 {
     "title": "论文浅尝",
     "author": "OpenKG",
+    "root": ".",
+    "structure": {
+        "readme": "introduction.md"
+    },
     "plugins": [
         "katex"
     ]
