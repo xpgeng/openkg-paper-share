@@ -5,7 +5,7 @@
 
 ![](img/Generative-QA:-Learning-to-Answer-the-Whole-Question.md_1.png)
 
-链接: https://openreview.net/forum?id=Bkx0RjA9tX
+> 来源：ICLR 2019
 
 
 

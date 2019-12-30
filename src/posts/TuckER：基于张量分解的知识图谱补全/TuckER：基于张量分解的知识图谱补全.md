@@ -6,7 +6,7 @@
 
 ![](img/TuckER：基于张量分解的知识图谱补全.md_1.png)
 
-> 论文链接：https://arxiv.org/abs/1901.09590
+> 来源：EMNLP-IJCNLP 2019
 
 
 ## **背景**
@@ -43,7 +43,7 @@
 
 ## **理论分析**
 
-本文的亮点在于它的理论分析证明了 TuckER 有完全表现力：给定任意在实体集E和关系集R上的真实三元组（ground truth），TuckER 在 **d<sub>e</sub>**=**n<sub>e</sub>**, **d<sub>r</sub>**=**n<sub>r</sub>** 的时候（**n<sub>e</sub>** 表示实体数量，**n<sub>r </sub>**表示关系数量），可以完全表示这些ground truth三元组。证明过程很简单，作者给了一个启发式的解：让实体和关系向量取one-hot形式，然后让核心张量**W**的维数是 **n<sub>e</sub>***** n<sub>r</sub>***** n<sub>e</sub>** 和原始的三阶张量相等，并且，如果其中一个元素对应的三元组是 ground truth，则置其为 1，否则置为 0。根据得分函数的定义，这种情况下计算得到的预测概率，正好可以准确表示真实概率。这个达到完全表现力的维度下界是远小于ComplEx和SimplE的，体现了 TuckER 的优越性。此外作者还分析了TuckER和之前一些张量分解模型的关系，证明了 RESCAL、DistMult、ComplEx 和 SimplE 都是 TuckER 的一种变体。
+本文的亮点在于它的理论分析证明了 TuckER 有完全表现力：给定任意在实体集E和关系集R上的真实三元组（ground truth），TuckER 在 **d<sub>e</sub>**=**n<sub>e</sub>**, **d<sub>r</sub>**=**n<sub>r</sub>** 的时候（**n<sub>e</sub>** 表示实体数量，**n<sub>r </sub>**表示关系数量），可以完全表示这些ground truth三元组。证明过程很简单，作者给了一个启发式的解：让实体和关系向量取one-hot形式，然后让核心张量**W**的维数是 n<sub>e</sub> n<sub>r</sub>n<sub>e</sub> 和原始的三阶张量相等，并且，如果其中一个元素对应的三元组是 ground truth，则置其为 1，否则置为 0。根据得分函数的定义，这种情况下计算得到的预测概率，正好可以准确表示真实概率。这个达到完全表现力的维度下界是远小于ComplEx和SimplE的，体现了 TuckER 的优越性。此外作者还分析了TuckER和之前一些张量分解模型的关系，证明了 RESCAL、DistMult、ComplEx 和 SimplE 都是 TuckER 的一种变体。
 
 
 ## **实验结果**

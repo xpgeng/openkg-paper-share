@@ -5,7 +5,7 @@
 
 ![](img/Aligning-Knowledge-Base-and-Document-Embedding-Models.md_1.png)
 
-本文是我们于苏黎世大学合作的关注与知识图谱和文本对齐的论文，发表于ISWC2018.
+本文是我们于苏黎世大学合作的关注与知识图谱和文本对齐的论文，发表于 ISWC2018.
 
  
 

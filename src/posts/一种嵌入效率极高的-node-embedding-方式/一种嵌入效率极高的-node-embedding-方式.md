@@ -3,13 +3,9 @@
 
 > 论文笔记整理：叶群，浙江大学计算机学院，知识图谱、NLP方向。
 
-
-
 ![](img/一种嵌入效率极高的-node-embedding-方式.md_1.png)
 
 > 会议：WSDM 2019
-
-> 链接：https://dl.acm.org/citation.cfm?id=3290961
 
 ## **Motivation**
 
@@ -29,7 +25,7 @@
 
 介绍三种常用的baseline
 
-1. Local similarity indices
+1. **Local similarity indices**
 
 分析节点周围的局部结构，作为节点之间存在链接的概率（以下式子中δ表示节点的相邻一跳节点）。
 - Common neighbours：以两节点公共邻居的个数来衡量存在链接的概率![](img/一种嵌入效率极高的-node-embedding-方式.md_3.png)
@@ -39,7 +35,7 @@
 - Preferential Attachment index：以节点现有的度来衡量节点之间存在链接的概率（非常naïve的assumption）![](img/一种嵌入效率极高的-node-embedding-方式.md_5.png)
 
 
-2. Matrix factorization
+2. **Matrix factorization**
 
 矩阵分解的方式将网络的邻接矩阵作为输入，分解成两个低秩的矩阵。低秩矩阵的行或列可以作为节点的latent feature，将两节点的latent feature做点积，即可得到两节点之间存在链接的概率。
 - Truncate SVD![](img/一种嵌入效率极高的-node-embedding-方式.md_6.png)
@@ -47,7 +43,7 @@
 - Non-negative matrix factorization（NMF）![](img/一种嵌入效率极高的-node-embedding-方式.md_7.png)
 
 
-3. Neural embedding
+3. **Neural embedding**
 
 一些工作尝试用神经网络来学习graph embedding，比如经典的DeepWalk和node2vec算法，都是受word2vec的启发。基本思想是将图中的节点当做单词，在图中随机游走得到一系列节点当作一个句子，然后利用word2vec的目标函数来做训练。训练完成后，将节点的embedding做点积，即得到节点之间存在链接的概率。
 

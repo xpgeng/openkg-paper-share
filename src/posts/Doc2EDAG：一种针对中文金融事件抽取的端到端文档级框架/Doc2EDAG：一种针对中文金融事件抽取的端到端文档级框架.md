@@ -5,7 +5,7 @@
 
 ![](img/Doc2EDAG：一种针对中文金融事件抽取的端到端文档级框架.md_1.png)
 
-> 链接：https://arxiv.org/pdf/1904.07535.pdf
+> 来源：EMNLP 2019
 
 
 

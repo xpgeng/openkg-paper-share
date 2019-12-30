@@ -5,6 +5,8 @@
 
 ![](img/Interaction-Embeddings-for-Prediction-and-Explanation.md_1.png)
 
+> 来源：WSDM 2019
+
 本文是我们与苏黎世大学合作的工作，将发表于WSDM2019，这篇工作在知识图谱的表示学习中考虑了实体和关系的交叉交互，并且从预测准确性和可解释性两个方面评估了表示学习结果的好坏。
 
  
