@@ -29,6 +29,7 @@
     * [Interaction Embeddings for Prediction and Explanation //基于交叉交互的知识图谱链接预测及可解释](src/posts/Interaction*Embeddings*for*Prediction*and*Explanation/Interaction*Embeddings*for*Prediction*and*Explanation.md)
     * [区分概念和实例的知识图谱嵌入方法](src/posts/区分概念和实例的知识图谱嵌入方法/区分概念和实例的知识图谱嵌入方法.md)
     * [用对抗学习做知识表示（NAACL2018）](src/posts/用对抗学习做知识表示（NAACL2018）/用对抗学习做知识表示（NAACL2018）.md)
+    * [知识图谱中的链接预测：一种基于层次约束的方法](src/posts/知识图谱中的链接预测：一种基于层次约束的方法/知识图谱中的链接预测：一种基于层次约束的方法.md)
 
 * 知识问答
     * [利用问题生成提升知识图谱问答](src/posts/利用问题生成提升知识图谱问答/利用问题生成提升知识图谱问答.md)
@@ -36,16 +37,15 @@
     * [基于知识图谱 Embedding 的问答](src/posts/基于知识图谱*Embedding*的问答/基于知识图谱*Embedding*的问答.md)
     * [利用知识*意识阅读器改进的不完整知识图谱问答方法](src/posts/利用知识*意识阅读器改进的不完整知识图谱问答方法/利用知识*意识阅读器改进的不完整知识图谱问答方法.md)
     * [利用 KG Embedding 进行问题回答](src/posts/利用*KG*Embedding*进行问题回答/利用*KG*Embedding*进行问题回答.md)
-    * [一种用于多关系问答的可解释推理网络](src/posts/一种用于多关系问答的可解释推理网络/一种用于多关系问答的可解释推理网络.md)
     * [主题感知的问答生成](src/posts/主题感知的问答生成/主题感知的问答生成.md)
     * [面向单关系事实问题的中文问答模型](src/posts/面向单关系事实问题的中文问答模型/面向单关系事实问题的中文问答模型.md)
     * [Generative QA: Learning to Answer the Whole Question //基于生成的问答系统](src/posts/Generative*QA*Learning*to*Answer*the*Whole*Question/Generative*QA:*Learning*to*Answer*the*Whole*Question.md)
+    * [一种用于多关系问答的可解释推理网络](src/posts/一种用于多关系问答的可解释推理网络/一种用于多关系问答的可解释推理网络.md)
     * [为基于知识库的问答构建形式查询生成](src/posts/为基于知识库的问答构建形式查询生成/为基于知识库的问答构建形式查询生成.md)
     
 * 推荐系统
     * [基于知识图谱注意力网络的商品推荐](src/posts/基于知识图谱注意力网络的商品推荐/基于知识图谱注意力网络的商品推荐.md)
     * [基于知识图谱中图卷积神经网络的推荐系统](src/posts/基于知识图谱中图卷积神经网络的推荐系统/基于知识图谱中图卷积神经网络的推荐系统.md)
-    * [知识图谱中的链接预测：一种基于层次约束的方法](src/posts/知识图谱中的链接预测：一种基于层次约束的方法/知识图谱中的链接预测：一种基于层次约束的方法.md)
     * [DKN: 面向新闻推荐的深度知识感知网络](src/posts/DKN*面向新闻推荐的深度知识感知网络/DKN:*面向新闻推荐的深度知识感知网络.md)
 
 * 文本生成
